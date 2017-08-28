@@ -1,0 +1,3 @@
+export const MATRIX_BASE_URL = MATRIX_ENTRANCE
+
+export const UCH_QUIZ_OPEN = 'UCH_QUIZ_OPEN'

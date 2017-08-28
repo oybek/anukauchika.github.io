@@ -1,0 +1,86 @@
+{
+	"uch-quiz-scala-traversable": {
+		"name": "List"
+		, "desc": "Scala Traversable trait methods"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala", "scala-collections" ]
+		, "time": 30
+		, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Traversable"
+		, "items": [
+			"map", "flatMap"
+			, "filter"
+			, "fold", "foldLeft", "foldRight"
+			, "scan", "scanLeft", "scanRight"
+			, "count", "size", "diff"
+		]
+	}
+	, "uch-quiz-scala-collection-traits": {
+		"name": "Collection Traits"
+		, "desc": "Scala collection traits"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala", "collections" ]
+		, "time": 2
+		, "learn": "http://docs.scala-lang.org/overviews/collections/introduction.html"
+		, "items": [
+			{
+				"name": "Traversable"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Traversable"
+			}, {
+				"name": "Iterable"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Iterable"
+			}, {
+				"name": "Map"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Map"
+			}, {
+				"name": "Set"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Set"
+			}, {
+				"name": "MultiMap"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.MultiMap"
+			}, {
+				"name": "ObservableMap"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.ObservableMap"
+			}
+		]
+	}
+	, "uch-quiz-scala-map2": {
+		"name": "Map"
+		, "desc": "Scala Map[K, T] methods"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala" ]
+		, "time": 10
+		, "items": [ "map", "scan" ]
+	}
+	, "uch-quiz-scala-map3": {
+		"name": "Map"
+		, "desc": "Scala Map[K, T] methods"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala" ]
+		, "time": 10
+		, "items": [ "map", "scan" ]
+	}
+	, "uch-quiz-scala-map4": {
+		"name": "Map"
+		, "desc": "Scala Map[K, T] methods"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala" ]
+		, "time": 10
+		, "items": [ "map", "scan" ]
+	}
+	, "uch-quiz-scala-map5": {
+		"name": "Map"
+		, "desc": "Scala Map[K, T] methods"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala" ]
+		, "time": 10
+		, "items": [ "map", "scan" ]
+	}
+	, "uch-quiz-scala-map6": {
+		"name": "Map"
+		, "desc": "Scala Map[K, T] methods"
+		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
+		, "tags": [ "scala" ]
+		, "time": 10
+		, "items": [ "map", "scan" ]
+	}
+}
