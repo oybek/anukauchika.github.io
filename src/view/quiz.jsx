@@ -73,7 +73,7 @@ class Quiz extends React.Component {
 		}
 	}
 
-	componentDidMount() {
+	restart() {
 		const id = this.props.params.id
 		const qz = this.props.quizMap[id]
 		this.setState(makeQuiz(qz))
@@ -89,6 +89,10 @@ class Quiz extends React.Component {
 		this.setState({ tid: tid })
 	}
 
+	componentDidMount() {
+		this.restart()
+	}
+
 	componentWillUnmount() {
 		this.loose()
 	}
@@ -97,7 +101,6 @@ class Quiz extends React.Component {
 		const word = ev.target.value
 		this.setState({ word: word })
 		const st = this.state
-		console.log(st.remaining)
 		if (st.remaining.hasOwnProperty(word) && st.remaining[word].state === 1) {
 			const w = { ...st.remaining[word], state: 0 }
 			this.setState({
@@ -173,7 +176,7 @@ class Quiz extends React.Component {
 									<Button color='google plus'	icon='google plus'	href={GOOGLEPLUS} />
 								</Container>
 								<Divider hidden />
-								<Button fluid basic as={Link} href={ "/quiz/" + this.props.params.id }>Restart</Button>
+								<Button fluid basic as={Link} onClick={::this.restart} >Restart</Button>
 								<Divider hidden fitted />
 								<Button fluid basic as={Link} href="/">Go to quizzez</Button>
 							</Segment>
@@ -188,7 +191,7 @@ class Quiz extends React.Component {
 									<Button color='google plus'	icon='google plus'	href={GOOGLEPLUS} />
 								</Container>
 								<Divider hidden />
-								<Button fluid basic as={Link} href={ "/quiz/" + this.props.params.id }>Restart</Button>
+								<Button fluid basic as={Link} onClick={::this.restart} >Restart</Button>
 								<Divider hidden fitted />
 								<Button fluid basic as={Link} href="/">Go to quizzez</Button>
 							</Segment>
