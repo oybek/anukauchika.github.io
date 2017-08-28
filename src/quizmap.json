@@ -4,14 +4,38 @@
 		, "desc": "Scala Traversable trait methods"
 		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
 		, "tags": [ "scala", "scala-collections" ]
-		, "time": 30
+		, "time": 360
 		, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Traversable"
 		, "items": [
-			"map", "flatMap"
-			, "filter"
+			"++", "++:", ":++", "/:", ":\\"
+			, "addString", "aggregate", "collect", "collectFirst"
+			, "companion", "copyToArray", "copyToBuffer"
+			, "count", "drop", "dropWhile"
+			, "exists", "filter", "filterNot"
+			, "find", "flatMap", "flatten"
 			, "fold", "foldLeft", "foldRight"
+			, "forall", "foreach", "genericBuilder"
+			, "groupBy", "hasDefiniteSize", "head"
+			, "headOption", "init", "inits"
+			, "isEmpty", "isTraversableAgain", "last"
+			, "lastOption", "map", "max"
+			, "maxBy", "min", "minBy"
+			, "mkString", "nonEmpty", "par"
+			, "partition", "product", "reduce"
+			, "reduceLeft", "reduceLeftOption", "reduceOption"
+			, "reduceRight", "reduceRightOption", "repr"
 			, "scan", "scanLeft", "scanRight"
-			, "count", "size", "diff"
+			, "seq", "size", "slice"
+			, "span", "splitAt", "stringPrefix"
+			, "sum", "tail", "tails"
+			, "take", "takeWhile", "to"
+			, "toArray", "toBuffer", "toIndexedSeq"
+			, "toIterable", "toIterator", "toList"
+			, "toMap", "toParArray", "toSeq"
+			, "toSet", "toStream", "toString"
+			, "toTraversable", "toVector", "transpose"
+			, "unzip", "unzip3", "view"
+			, "withFilter"
 		]
 	}
 	, "uch-quiz-scala-collection-traits": {
@@ -19,7 +43,7 @@
 		, "desc": "Scala collection traits"
 		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
 		, "tags": [ "scala", "collections" ]
-		, "time": 2
+		, "time": 90
 		, "learn": "http://docs.scala-lang.org/overviews/collections/introduction.html"
 		, "items": [
 			{
@@ -38,49 +62,79 @@
 				"name": "MultiMap"
 				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.MultiMap"
 			}, {
+				"name": "Seq"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Seq"
+			}, {
+				"name": "LinearSeq"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.LinearSeq"
+			}, {
+				"name": "IndexedSeq"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.IndexedSeq"
+			}, {
+				"name": "Buffer"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Buffer"
+			}, {
+				"name": "Queue"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.Queue"
+			}, {
 				"name": "ObservableMap"
 				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.ObservableMap"
+			}, {
+				"name": "ObservableSet"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.ObservableSet"
+			}, {
+				"name": "ObservableBuffer"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.ObservableBuffer"
+			}, {
+				"name": "SynchronizedMap"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.SynchronizedMap"
+			}, {
+				"name": "SynchronizedSet"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.SynchronizedSet"
+			}, {
+				"name": "SynchronizedBuffer"
+				, "learn": "http://www.scala-lang.org/files/archive/nightly/docs/library/index.html#scala.collection.SynchronizedBuffer"
 			}
 		]
 	}
-	, "uch-quiz-scala-map2": {
-		"name": "Map"
-		, "desc": "Scala Map[K, T] methods"
-		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
-		, "tags": [ "scala" ]
-		, "time": 10
-		, "items": [ "map", "scan" ]
+	, "uch-quiz-java-object-methods": {
+		"name": "Object"
+		, "desc": "Java Object class methods"
+		, "img": ""
+		, "tags": [ "java", "java-core" ]
+		, "time": 30
+		, "learn": "https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"
+		, "items": [
+			"clone", "equals", "finalize", "getClass"
+			, "hashCode", "notify", "notifyAll", "toString"
+			, "wait"
+		]
 	}
-	, "uch-quiz-scala-map3": {
-		"name": "Map"
-		, "desc": "Scala Map[K, T] methods"
-		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
-		, "tags": [ "scala" ]
-		, "time": 10
-		, "items": [ "map", "scan" ]
+	, "uch-quiz-spark-dataset-actions": {
+		"name": "Dataset"
+		, "desc": "Spark Dataset actions"
+		, "img": ""
+		, "tags": [ "spark", "scala" ]
+		, "time": 45
+		, "learn": "https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.Dataset"
+		, "items": [
+			"collect", "collectAsList", "count", "describe"
+			, "first", "foreach", "foreachPartition", "head"
+			, "reduce", "show", "take", "takeAsList", "toLocalIterator"
+		]
 	}
-	, "uch-quiz-scala-map4": {
-		"name": "Map"
-		, "desc": "Scala Map[K, T] methods"
-		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
-		, "tags": [ "scala" ]
-		, "time": 10
-		, "items": [ "map", "scan" ]
-	}
-	, "uch-quiz-scala-map5": {
-		"name": "Map"
-		, "desc": "Scala Map[K, T] methods"
-		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
-		, "tags": [ "scala" ]
-		, "time": 10
-		, "items": [ "map", "scan" ]
-	}
-	, "uch-quiz-scala-map6": {
-		"name": "Map"
-		, "desc": "Scala Map[K, T] methods"
-		, "img": "https://cdn.worldvectorlogo.com/logos/scala-4.svg" 
-		, "tags": [ "scala" ]
-		, "time": 10
-		, "items": [ "map", "scan" ]
+	, "uch-quiz-seven-wonders": {
+		"name": "Чудеса света"
+		, "desc": "7 чудес света"
+		, "img": "" 
+		, "tags": [ "культура", "сооружения" ]
+		, "time": 60
+		, "learn": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BC%D1%8C_%D1%87%D1%83%D0%B4%D0%B5%D1%81_%D1%81%D0%B2%D0%B5%D1%82%D0%B0"
+		, "items": [
+			"Пирамида Хеопса", "Висячие сады Семирамиды"
+			, "Статуя Зевса", "Храм Артемиды"
+			, "Мавзолей в Геликарнасе", "Колосс Родосский"
+			, "Александрийский маяк"
+		]
 	}
 }
