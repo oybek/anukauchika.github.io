@@ -1,8 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
-import { createLogger } from 'redux-logger'
 
-import * as EV from './api/base'
 import api from './api'
+import * as EV from './api/base'
 
 import rootReducer from './reducer/root'
 

@@ -1,32 +1,46 @@
-var webpack = require("webpack");
-const webpackMerge = require('webpack-merge');
-const commonConfig = require('./webpack.base.js');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const path				= require('path')
+const webpack			 = require('webpack')
+const webpackMerge		= require('webpack-merge')
+const commonConfig		= require('./webpack.base.js')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const GLOBALS = {
 	'process.env': {
 		'NODE_ENV': JSON.stringify('production')
 	},
-	MATRIX_ENTRANCE: '""',
-	__DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
-};
+	__DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'true'))
+}
 
 module.exports = function(env) {
 	return webpackMerge(commonConfig(), {
-		devtool: 'cheap-module-source-map',
 		entry: {
-			app: 'appldr'
+			app: [ './appldr' ],
 		},
+		output: {
+			path: path.join(__dirname, 'release'),
+			filename: '[name].js'
+		},
+		module: {
+			rules: [
+				{
+					test: /\.jsx?$/,
+					exclude: /(node_modules|bower_components)/,
+					loader: 'babel-loader',
+					query: {
+						cacheDirectory: true
+					}
+				}
+			]
+		},
+		cache: true,
 		plugins: [
+			new webpack.DefinePlugin(GLOBALS),
 			new HtmlWebpackPlugin({
-				inject: false,
 				template: 'template.html',
-				filename: '../release/index.html',
+				inject: false,
 				chunksSortMode: 'dependency'
 			}),
 			new webpack.NoEmitOnErrorsPlugin(),
-			new webpack.DefinePlugin(GLOBALS),
 			new webpack.LoaderOptionsPlugin({
 				minimize: true,
 				debug: false
@@ -43,5 +57,5 @@ module.exports = function(env) {
 				comments: false
 			})
 		]
-	});
-};
+	})
+}
