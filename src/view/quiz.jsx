@@ -198,7 +198,7 @@ class Quiz extends React.Component {
 							}
 							{!st.over &&
 							<Segment>
-								<Input id="cmd" disabled={st.over} value={st.word} onChange={::this.handleChange} size='massive' fluid />
+								<Input id="cmd" autoFocus disabled={st.over} value={st.word} onChange={::this.handleChange} size='massive' fluid />
 							</Segment>
 							}
 						</Grid.Column>
