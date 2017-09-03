@@ -46,7 +46,7 @@ class QuizList extends React.Component {
 
 				<Grid padded stackable >
 				{ list.map( (q, idx) =>
-					<Grid.Column key={idx} width={2} >
+					<Grid.Column key={idx} width={2} widescreen={2} tablet={3} mobile={3} >
 						<Segment textAlign="center" className="quiz-card" onClick={this.go.bind(this, q.id)} >
 							<Header as="h2" icon>
 								{q.desc}
