@@ -8,6 +8,7 @@ import {
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
 
+import api from '../api'
 import QuizList from './quizlist'
 
 
@@ -15,6 +16,10 @@ class Start extends React.Component {
 
 	constructor(props) {
 		super(props)
+	}
+
+	componentDidMount() {
+		api.stat.main()
 	}
 
 	render() {

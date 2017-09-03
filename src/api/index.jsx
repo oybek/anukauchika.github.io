@@ -1,22 +1,13 @@
 import * as EV from './base'
 
+import ga from 'react-ga'
+ga.initialize('UA-105707541-1')
 
-const MATRIX_BASE_URL = EV.MATRIX_BASE_URL
-
-function showHelp() {
-	return {
-		type: EV.DYNO_SHOW_HELP
-		, data: {}
-	}
+const stat = {
+	main: function () { ga.pageview("main"); }
+	, quiz: function (id) { ga.pageview(id); }
 }
-
-function hideHelp() {
-	return {
-		type: EV.DYNO_HIDE_HELP
-		, data: {}
-	}
-}
-
 
 export default {
+	stat: stat
 }

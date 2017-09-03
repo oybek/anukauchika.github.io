@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 import moment from 'moment'
 
 import styles from './quiz.scss'
+import api from 'api'
 
 
 const TWITTER = "https://twitter.com/intent/tweet?text=Anuka%20Uchika!%20https%3A%2F%2Fanukauchika.github.com"
@@ -91,6 +92,7 @@ class Quiz extends React.Component {
 
 	componentDidMount() {
 		this.restart()
+		api.stat.quiz(this.props.params.id)
 	}
 
 	componentWillUnmount() {
